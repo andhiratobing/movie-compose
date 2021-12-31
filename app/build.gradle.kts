@@ -53,14 +53,18 @@ dependencies {
     /** Module**/
     implementation(project(Modules.themes))
     implementation(project(Modules.components))
-    implementation(project(Modules.featureMovie))
-    implementation(project(Modules.featureTvShows))
 
     /** Android ui **/
     androidUi()
 
     /** Compose ui **/
     composeUi()
+
+    /** view pager **/
+    viewPager()
+
+    /** System ui bar controller**/
+    implementation(Libs.GoogleAccompanist.accompanistSystemUiController)
 
     /** Lifecycle runtime **/
     implementation(Libs.Lifecycle.lifecycleRuntimeKtx)
