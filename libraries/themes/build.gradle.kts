@@ -1,5 +1,5 @@
 plugins {
-    id(Plugins.GradlePluginId.ANDROID_APPLICATION)
+    id(Plugins.GradlePluginId.ANDROID_LIBRARY)
     id(Plugins.GradlePluginId.KOTLIN_ANDROID)
 }
 
@@ -7,16 +7,11 @@ android {
     compileSdk  = AndroidConfigs.COMPILE_SDK
 
     defaultConfig {
-        applicationId = AndroidConfigs.DefaultConfig.APPLICATION_ID_APP
         minSdk = AndroidConfigs.DefaultConfig.MIN_SDK
         targetSdk = AndroidConfigs.DefaultConfig.TARGET_SDK
-        versionCode = AndroidConfigs.DefaultConfig.VERSION_CODE
-        versionName = AndroidConfigs.DefaultConfig.VERSION_NAME
 
         testInstrumentationRunner = AndroidConfigs.TEST_INSTRUMENTATION_RUNNER
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles(AndroidConfigs.CONSUMER_PROGUARD_FILES)
     }
 
     buildTypes {
@@ -50,24 +45,11 @@ android {
 
 dependencies {
 
-    /** Module**/
-    implementation(project(Modules.themes))
-    implementation(project(Modules.components))
-
     /** Android ui **/
     androidUi()
 
     /** Compose ui **/
     composeUi()
-
-    /** view pager **/
-    viewPager()
-
-    /** System ui bar controller**/
-    implementation(Libs.GoogleAccompanist.accompanistSystemUiController)
-
-    /** Lifecycle runtime **/
-    implementation(Libs.Lifecycle.lifecycleRuntimeKtx)
 
     /** Unit test **/
     testJUnit()

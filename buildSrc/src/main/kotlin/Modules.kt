@@ -1,4 +1,5 @@
 object Modules {
 
-    const val themes  = "themes"
+    const val themes                    = ":libraries:themes"
+    const val components                = ":libraries:components"
 }

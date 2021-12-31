@@ -51,6 +51,9 @@ dependencies {
     /** Compose ui **/
     composeUi()
 
+    /** Unit test **/
+    testJUnit()
+
     /** Instrumentation test **/
     androidTestEspresso()
     composeUiTest()
