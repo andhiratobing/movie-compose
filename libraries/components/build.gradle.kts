@@ -51,6 +51,9 @@ dependencies {
     /** Compose ui **/
     composeUi()
 
+    /** view pager **/
+    viewPager()
+
     /** Unit test **/
     testJUnit()
 
