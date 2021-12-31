@@ -53,6 +53,8 @@ dependencies {
     /** Module**/
     implementation(project(Modules.themes))
     implementation(project(Modules.components))
+    implementation(project(Modules.featureMovie))
+    implementation(project(Modules.featureTvShows))
 
     /** Android ui **/
     androidUi()
