@@ -54,8 +54,8 @@ fun DependencyHandler.composeUi() {
 
 /** Pager or view pager **/
 fun DependencyHandler.viewPager() {
-    implementation(Libs.GoogleAccompanist.accompanistPager)
-    implementation(Libs.GoogleAccompanist.accompanistPagerIndicator)
+    api(Libs.GoogleAccompanist.accompanistPager)
+    api(Libs.GoogleAccompanist.accompanistPagerIndicator)
 }
 
 /** Lifecycle **/
