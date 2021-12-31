@@ -51,6 +51,9 @@ dependencies {
     /** Compose ui **/
     composeUi()
 
+    /** System ui bar controller**/
+    api(Libs.GoogleAccompanist.accompanistSystemUiController)
+
     /** Unit test **/
     testJUnit()
 
