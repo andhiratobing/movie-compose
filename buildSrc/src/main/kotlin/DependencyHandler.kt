@@ -79,6 +79,15 @@ fun DependencyHandler.kotlinCoroutine() {
     implementation(Libs.Coroutine.coroutineAndroid)
 }
 
+/**
+ * Navigation Compose
+ */
+fun DependencyHandler.navigationCompose() {
+    implementation(Libs.NavigationCompose.navigationCompose)
+    implementation(Libs.NavigationCompose.navigationRuntimeKtx)
+}
+
+
 
 //---------------------TEST------------------------//
 

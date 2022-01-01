@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.GradlePluginId.ANDROID_APPLICATION)
     id(Plugins.GradlePluginId.KOTLIN_ANDROID)
+    id(Plugins.GradlePluginId.DAGGER_HILT)
+    kotlin(Plugins.GradlePluginId.KOTLIN_KAPT)
 }
 
 android {
@@ -65,6 +67,8 @@ dependencies {
     /** view pager **/
     viewPager()
 
+    daggerHilt()
+
     /** System ui bar controller**/
     implementation(Libs.GoogleAccompanist.accompanistSystemUiController)
 
@@ -80,4 +84,9 @@ dependencies {
 
     /** Debug compose **/
     debugComposeUiTooling()
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

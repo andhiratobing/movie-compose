@@ -16,8 +16,10 @@ import com.andhiratobing.moviecompose.ui.theme.MovieComposeTheme
 import com.andhiratobing.themes.AppThemeColorBar
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
+import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalPagerApi
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

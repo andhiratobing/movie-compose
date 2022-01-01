@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.GradlePluginId.ANDROID_LIBRARY)
     id(Plugins.GradlePluginId.KOTLIN_ANDROID)
+    id(Plugins.GradlePluginId.DAGGER_HILT)
+    kotlin(Plugins.GradlePluginId.KOTLIN_KAPT)
 }
 
 android {
@@ -45,15 +47,39 @@ android {
 
 dependencies {
 
+    /** Module**/
+    implementation(project(Modules.components))
+
     /** Android ui **/
     androidUi()
 
     /** Compose ui **/
     composeUi()
 
-    /** view pager **/
+    /** View pager **/
     viewPager()
 
+    /** Dagger hilt**/
+    daggerHilt()
+
+    /** Coroutine **/
+    kotlinCoroutine()
+
+    /**Navigation compose **/
+    navigationCompose()
+
+    /**Hilt navigation compose**/
+    implementation(Libs.DaggerHilt.hiltNavigationCompose)
+
+    /**Live data **/
+    implementation(Libs.Compose.composeRuntimeLiveData)
+
+    /** GSON converter**/
+    implementation(Libs.Gson.gson)
+
+    /**Flow layout**/
+    implementation(Libs.GoogleAccompanist.accompanistFlowLayout)
+    
     /** Unit test **/
     testJUnit()
 
@@ -63,4 +89,9 @@ dependencies {
 
     /** Debug compose **/
     debugComposeUiTooling()
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
