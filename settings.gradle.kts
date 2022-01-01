@@ -3,8 +3,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "MovieCompose"
-include ':app'
+include(
+    ":app",
+    ":libraries:themes",
+    ":libraries:components",
+    ":features:movie",
+    ":features:tvshows"
+)
