@@ -45,6 +45,9 @@ android {
 
 dependencies {
 
+    /** Module**/
+    implementation(project(Modules.components))
+
     /** Android ui **/
     androidUi()
 

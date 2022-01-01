@@ -54,6 +54,9 @@ dependencies {
     /** view pager **/
     viewPager()
 
+    /** Coil compose**/
+    api(Libs.Coil.coilCompose)
+
     /** Unit test **/
     testJUnit()
 
