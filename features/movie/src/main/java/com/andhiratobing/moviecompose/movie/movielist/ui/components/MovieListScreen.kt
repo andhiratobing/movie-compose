@@ -1,4 +1,4 @@
-package com.andhiratobing.moviecompose.movie.movielist.presentation.components
+package com.andhiratobing.moviecompose.movie.movielist.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,9 +12,9 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
 import coil.annotation.ExperimentalCoilApi
-import com.andhiratobing.components.movie.MovieGenre
-import com.andhiratobing.components.movie.MoviePosterPath
-import com.andhiratobing.components.movie.MovieTitle
+import com.andhiratobing.components.movie.Genre
+import com.andhiratobing.components.movie.PosterPath
+import com.andhiratobing.components.movie.Title
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
@@ -68,7 +68,7 @@ fun MovieListScreen(
             modifier = Modifier.fillMaxSize()
         ) {
             //movie poster
-            MoviePosterPath(
+            PosterPath(
                 posterPath = posterPath,
                 modifier = Modifier
                     .width(120.dp)
@@ -76,7 +76,7 @@ fun MovieListScreen(
             )
 
             //movie title
-            MovieTitle(
+            Title(
                 title = title,
                 modifier = Modifier
                     .padding(top = 6.dp)
@@ -98,7 +98,7 @@ fun MovieListScreen(
 
             ) {
                 genre.forEach {
-                    MovieGenre(genre = listOf(it))
+                    Genre(genre = listOf(it))
                 }
             }
         }
