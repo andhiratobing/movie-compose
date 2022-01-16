@@ -1,4 +1,4 @@
-package com.andhiratobing.moviecompose.movie.movielist.presentation
+package com.andhiratobing.moviecompose.movie.movielist.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

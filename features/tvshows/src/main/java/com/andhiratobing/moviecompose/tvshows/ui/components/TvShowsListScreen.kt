@@ -1,4 +1,4 @@
-package com.andhiratobing.moviecompose.movie.movielist.presentation.components
+package com.andhiratobing.moviecompose.tvshows.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,20 +12,19 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
 import coil.annotation.ExperimentalCoilApi
-import com.andhiratobing.components.movie.MovieGenre
-import com.andhiratobing.components.movie.MoviePosterPath
-import com.andhiratobing.components.movie.MovieTitle
+import com.andhiratobing.components.movie.Genre
+import com.andhiratobing.components.movie.PosterPath
+import com.andhiratobing.components.movie.Title
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowMainAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 
-
 @ExperimentalCoilApi
 @Composable
-fun MovieListScreen(
+fun TvShowsListScreen(
     title: String,
     posterPath: String,
-    genre: List<String>
+    genre: List<String>,
 ) {
 
     val constrainSet = ConstraintSet {
@@ -67,23 +66,23 @@ fun MovieListScreen(
             constrainSet,
             modifier = Modifier.fillMaxSize()
         ) {
-            //movie poster
-            MoviePosterPath(
+            //tv shows poster
+            PosterPath(
                 posterPath = posterPath,
                 modifier = Modifier
                     .width(120.dp)
                     .height(150.dp)
             )
 
-            //movie title
-            MovieTitle(
+            //tv shows  title
+            Title(
                 title = title,
                 modifier = Modifier
                     .padding(top = 6.dp)
                     .fillMaxWidth()
             )
 
-            //movie genre
+            //tv shows  genre
             FlowRow(
                 modifier = Modifier
                     .layoutId("genre_constrain"),
@@ -98,7 +97,7 @@ fun MovieListScreen(
 
             ) {
                 genre.forEach {
-                    MovieGenre(genre = listOf(it))
+                    Genre(genre = listOf(it))
                 }
             }
         }

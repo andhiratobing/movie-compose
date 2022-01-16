@@ -1,4 +1,4 @@
-package com.andhiratobing.moviecompose.movie.movielist.presentation
+package com.andhiratobing.moviecompose.movie.movielist.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.annotation.ExperimentalCoilApi
-import com.andhiratobing.moviecompose.movie.movielist.presentation.components.MovieListScreen
+import com.andhiratobing.moviecompose.movie.movielist.ui.components.MovieListScreen
+import com.andhiratobing.moviecompose.movie.movielist.ui.viewmodel.MovieListViewModel
 
 @ExperimentalCoilApi
 @Composable
