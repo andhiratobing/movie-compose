@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun MovieGenre(
+fun Genre(
     genre: List<String>,
     modifier: Modifier = Modifier
 ) {

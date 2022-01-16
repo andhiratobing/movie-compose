@@ -12,7 +12,7 @@ import coil.transform.RoundedCornersTransformation
 
 @ExperimentalCoilApi
 @Composable
-fun MoviePosterPath(
+fun PosterPath(
     posterPath: String,
     modifier: Modifier = Modifier
 ) {
@@ -33,7 +33,7 @@ fun MoviePosterPath(
 
         Image(
             painter = painter,
-            contentDescription = "Movie poster path"
+            contentDescription = "Poster path"
         )
     }
 }
