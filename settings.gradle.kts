@@ -10,6 +10,7 @@ include(
     ":app",
     ":libraries:themes",
     ":libraries:components",
+    ":libraries:abstraction",
     ":features:movie",
-    ":features:tvshows"
+    ":features:tvshows",
 )
